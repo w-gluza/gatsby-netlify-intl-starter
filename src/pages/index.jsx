@@ -1,47 +1,17 @@
 import React from 'react';
-import { Link, graphql } from 'gatsby';
+import { graphql } from 'gatsby';
 import Layout from '../components/layouts/main/Layout';
+import Home from '../components/Home/Home';
+import BlogRoll from '../components/BlogRoll/BlogRoll';
 
 const IndexPage = ({ pageContext: { locale }, ...props }) => {
   const { homePageData: data } = props.data;
   const { edges: posts } = props.data.blogPosts;
+
   return (
     <Layout locale={locale}>
-      <h1>
-        title:
-        {data.frontmatter.title}
-      </h1>
-      <p>
-        Content:
-        {data.frontmatter.text}
-      </p>
-      <p>
-        Locale:
-        {locale}
-      </p>
-      <Link to={locale === 'en' ? '/pl' : '/'}>
-        <p>Change language</p>
-      </Link>
-      <h2>BlogPosts:</h2>
-      {posts.map(({ node: post }, i) => (
-        <div key={i}>
-          <h3>
-            Blog Post Title:
-            {post.frontmatter.title}
-          </h3>
-          <p>
-            Blog Post Description:
-            {post.frontmatter.description}
-          </p>
-          <p>
-            Blog Post Date:
-            {post.frontmatter.date}
-          </p>
-          <Link to={post.fields.slug} title="link to blog post">
-            Link to blog post
-          </Link>
-        </div>
-      ))}
+      <Home data={data} locale={locale} />
+      <BlogRoll posts={posts} />
     </Layout>
   );
 };
