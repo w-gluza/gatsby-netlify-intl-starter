@@ -17,8 +17,8 @@ module.exports = {
     {
       resolve: 'gatsby-source-filesystem',
       options: {
-        path: `${__dirname}/src/pages`,
-        name: 'pages',
+        path: `${__dirname}/src/cms`,
+        name: 'blog',
       },
     },
     {
@@ -60,9 +60,6 @@ module.exports = {
     },
     {
       resolve: 'gatsby-plugin-netlify-cms',
-      options: {
-        modulePath: `${__dirname}/src/cms/cms.js`,
-      },
     },
     'gatsby-plugin-purgecss', // must be after other CSS plugins
     'gatsby-plugin-netlify', // make sure to keep it last in the array

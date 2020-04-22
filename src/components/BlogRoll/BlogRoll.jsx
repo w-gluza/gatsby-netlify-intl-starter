@@ -6,7 +6,7 @@ const BlogRoll = ({ posts }) => (
 
   <>
     {posts.map(({ node: post }, i) => (
-      <div>
+      <div key={`id_${i}`}>
         <h3>
           Blog Post Title:
           {post.frontmatter.title}
