@@ -1,7 +1,7 @@
-import React from 'react'
-import { graphql } from 'gatsby'
-import Layout from '../components/layouts/main/Layout'
-import SEO from '../components/util/seo/Seo'
+import React from 'react';
+import { graphql } from 'gatsby';
+import Layout from '../components/layouts/main/Layout';
+// import SEO from '../components/Seo'
 
 // interface BlogpostProps {
 //   pageContext: {
@@ -21,19 +21,31 @@ import SEO from '../components/util/seo/Seo'
 // }
 
 const BlogPost = ({ pageContext: { locale }, data }) => {
-  const { markdownRemark: post } = data
+  const { markdownRemark: post } = data;
   return (
     <Layout locale={locale}>
-      <SEO title="SEO Title Home" metaDescription="SEO Desc Home" />
-      <h1>title: {post.frontmatter.title}</h1>
-      <p>description: {post.frontmatter.description}</p>
-      <p>date: {post.frontmatter.date}</p>
+      {/* <SEO title="SEO Title Home" metaDescription="SEO Desc Home" /> */}
+      <h1>
+        title:
+        {' '}
+        {post.frontmatter.title}
+      </h1>
+      <p>
+        description:
+        {' '}
+        {post.frontmatter.description}
+      </p>
+      <p>
+        date:
+        {' '}
+        {post.frontmatter.date}
+      </p>
       <div dangerouslySetInnerHTML={{ __html: post.html }} />
     </Layout>
-  )
-}
+  );
+};
 
-export default BlogPost
+export default BlogPost;
 
 export const pageQuery = graphql`
   query BlogPostByID($id: String!) {
@@ -47,4 +59,4 @@ export const pageQuery = graphql`
       }
     }
   }
-`
+`;
