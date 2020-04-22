@@ -8,7 +8,7 @@ public_folder: /img
 collections:
   - name: "blog-en"
     label: "Blog - EN"
-    folder: "src/pages/blog/en"
+    folder: "src/cms/blog/en"
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
@@ -19,14 +19,14 @@ collections:
       - {label: "Publish Date", name: "date", widget: "datetime"}
       - {label: "Description", name: "description", widget: "text"}
       - {label: "Body", name: "body", widget: "markdown"}
-  - name: "blog-de"
-    label: "Blog - DE"
-    folder: "src/pages/blog/de"
+  - name: "blog-pl"
+    label: "Blog - PL"
+    folder: "src/cms/blog/pl"
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
       - {label: "Template Key", name: "templateKey", widget: "hidden", default: "blog-post"}
-      - {label: "Locale", name: "locale", widget: "hidden", default: "de"}
+      - {label: "Locale", name: "locale", widget: "hidden", default: "pl"}
       - {label: "Page Key", name: "pageKey", widget: "hidden", default: "page_blogpost"}
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Publish Date", name: "date", widget: "datetime"}
@@ -45,12 +45,12 @@ collections:
           - {label: "SEO Description", name: "seo_desc", widget: "string"}
           - {label: "Title", name: "title", widget: "string"}
           - {label: "Text", name: "text", widget: "text"}
-      - label: "Home - DE"
+      - label: "Home - PL"
         name: "home"
-        file: "src/pages/home/index.de.md"
+        file: "src/pages/home/index.pl.md"
         fields:
           - {label: "Page Key", name: "pageKey", widget: "hidden", default: "page_home"}
-          - {label: "Locale", name: "locale", widget: "hidden", default: "de"}
+          - {label: "Locale", name: "locale", widget: "hidden", default: "pl"}
           - {label: "SEO Title", name: "seo_title", widget: "string"}
           - {label: "SEO Description", name: "seo_desc", widget: "string"}
           - {label: "Title", name: "title", widget: "string"}

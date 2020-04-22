@@ -1,10 +1,10 @@
 ---
 templateKey: blog-post
-locale: de
+locale: pl
 pageKey: page_blogpost
-title: Hello World DE
+title: Hello World PL
 date: 2018-12-07T15:04:10.000Z
-description: Hello World Blog Post DE
+description: Hello World Blog Post PL
 ---
 
-Hello World
+Hello World PL

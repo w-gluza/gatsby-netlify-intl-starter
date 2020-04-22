@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link, graphql } from 'gatsby';
 import Layout from '../components/layouts/main/Layout';
-import { i18n } from '../constants/i18n';
 
 const IndexPage = ({ pageContext: { locale }, ...props }) => {
   const { homePageData: data } = props.data;
@@ -20,8 +19,7 @@ const IndexPage = ({ pageContext: { locale }, ...props }) => {
         Locale:
         {locale}
       </p>
-      <h2>{i18n[locale].text}</h2>
-      <Link to={locale === 'en' ? '/de' : '/'}>
+      <Link to={locale === 'en' ? '/pl' : '/'}>
         <p>Change language</p>
       </Link>
       <h2>BlogPosts:</h2>

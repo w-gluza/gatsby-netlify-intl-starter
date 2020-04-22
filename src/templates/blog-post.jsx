@@ -27,17 +27,14 @@ const BlogPost = ({ pageContext: { locale }, data }) => {
       {/* <SEO title="SEO Title Home" metaDescription="SEO Desc Home" /> */}
       <h1>
         title:
-        {' '}
         {post.frontmatter.title}
       </h1>
       <p>
         description:
-        {' '}
         {post.frontmatter.description}
       </p>
       <p>
         date:
-        {' '}
         {post.frontmatter.date}
       </p>
       <div dangerouslySetInnerHTML={{ __html: post.html }} />

@@ -4,8 +4,8 @@ module.exports = {
     locale: 'English',
     default: true,
   },
-  de: {
-    path: 'de',
-    locale: 'German',
+  pl: {
+    path: 'pl',
+    locale: 'Polish',
   },
-}
+};
