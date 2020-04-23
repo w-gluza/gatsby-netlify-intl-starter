@@ -3,7 +3,7 @@ import Helmet from 'react-helmet';
 
 
 const SEO = ({
-  metaDescription, lang = 'de', title, author = 'sugarly',
+  metaDescription, lang = 'en', title, author = 'sugarly',
 }) => (
   <Helmet
     htmlAttributes={{

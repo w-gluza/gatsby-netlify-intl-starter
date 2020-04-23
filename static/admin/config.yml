@@ -8,7 +8,7 @@ public_folder: /img
 collections:
   - name: "blog-en"
     label: "Blog - EN"
-    folder: "src/cms/blog/en"
+    folder: "src/cms/en/blog"
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
@@ -21,7 +21,7 @@ collections:
       - {label: "Body", name: "body", widget: "markdown"}
   - name: "blog-pl"
     label: "Blog - PL"
-    folder: "src/cms/blog/pl"
+    folder: "src/cms/pl/blog"
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
@@ -37,7 +37,7 @@ collections:
     files:
       - label: "Home - EN"
         name: "home"
-        file: "src/pages/home/index.md"
+        file: "src/cms/pl/home/index.md"
         fields:
           - {label: "Page Key", name: "pageKey", widget: "hidden", default: "page_home"}
           - {label: "Locale", name: "locale", widget: "hidden", default: "en"}
@@ -47,7 +47,7 @@ collections:
           - {label: "Text", name: "text", widget: "text"}
       - label: "Home - PL"
         name: "home"
-        file: "src/pages/home/index.pl.md"
+        file: "src/cms/pl/home/index.pl.md"
         fields:
           - {label: "Page Key", name: "pageKey", widget: "hidden", default: "page_home"}
           - {label: "Locale", name: "locale", widget: "hidden", default: "pl"}
